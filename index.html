@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Wildflower Collective
+
+</title>
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family: Georgia, serif;
+
+
+}
+
+body{
+
+background:#F7F3F0;
+
+font-family:
+
+Georgia, serif;
+
+color:#4B4453;
+
+line-height:1.9;
+
+overflow-x:hidden;
+
+}
+
+/* HEADER */
+
+header{
+
+position:sticky;
+
+top:0;
+
+background:
+
+rgba(247,243,240,.95);
+
+backdrop-filter:
+
+blur(10px);
+
+padding:
+
+18px 50px;
+
+display:flex;
+
+justify-content:
+
+space-between;
+
+align-items:center;
+
+border-bottom:
+
+1px solid #E7DED8;
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:1.3rem;
+
+font-weight:300;
+
+letter-spacing:2px;
+
+color:#6B5B73;
+
+font-family:Georgia, serif;
+
+
+}
+
+nav{
+
+display:flex;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+margin-left:30px;
+
+font-size:1.2rem;
+
+letter-spacing:2px;
+
+color:#6B5B73;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+opacity:.6;
+
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#F7F3F0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.hero img{
+
+width:100%;
+
+height:100vh;
+
+object-fit:cover;
+
+object-position:center center;
+
+display:block;
+
+}
+
+.section-title {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #6f4a7d;
+    margin-bottom: 6rem;
+}
+
+
+/* BUTTERFLY EXPLANATION */
+
+.butterfly-explanation{
+
+padding:
+
+0 20px 75px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* QUOTE */
+
+.quote {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 35px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 2;
+    color: #76627E;
+}
+
+.butterfly-explanation img{
+
+width:800px;
+
+max-width:95%;
+
+border-radius:20px;
+
+box-shadow:
+
+0 8px 25px
+
+rgba(0,0,0,.05);
+
+}
+
+/* INTRO */
+
+.intro{
+
+max-width:850px;
+
+margin:auto;
+
+padding:
+
+50px 35px 85px;
+
+text-align:center;
+
+font-size:1.25rem;
+
+line-height:2;
+
+color:#5B5760;
+
+}
+
+/* FEATURED */
+
+.featured{
+
+max-width:900px;
+
+margin:auto;
+
+padding:
+
+0 35px 100px;
+
+}
+
+.featured h2{
+
+font-size:3rem;
+
+font-weight:300;
+
+text-align:center;
+
+margin-bottom:40px;
+
+color:#6B5B73;
+
+}
+
+.featured-card{
+
+background: #F7F3f0;
+
+border-radius: 25px;
+
+overflow:hidden;
+
+display:flex;
+
+flex-wrap:wrap;
+
+box-shadow:
+
+0 8px 25px
+
+rgba(0,0,0,.05);
+
+}
+
+.featured-card img{
+
+width:250px;
+
+min-height:200px;
+
+object-fit:contain;
+
+background:#F7F3F0;
+
+}
+
+.featured-text{
+
+flex:1;
+
+padding:55px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.featured-text h3{
+
+font-size:2rem;
+
+font-weight:300;
+
+margin-bottom:20px;
+
+color:#6B5B73;
+
+}
+
+.featured-text p{
+
+line-height:2;
+
+margin-bottom:30px;
+
+color:#5B5760;
+
+}
+
+.featured-btn{
+
+padding:
+
+14px 30px;
+
+border:
+
+1px solid #7C6587;
+
+border-radius:35px;
+
+text-decoration:none;
+
+width:fit-content;
+
+letter-spacing:2px;
+
+color:#7C6587;
+
+transition:.3s;
+
+}
+
+.featured-btn:hover{
+
+background:#7C6587;
+
+color:white;
+
+}
+
+.home-stories{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 35px;
+}
+
+.home-stories h2{
+    text-align:center;
+    color:#6B5B73;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:40px;
+}
+
+.stories-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.story-card{
+    text-decoration:none;
+    color:#6B5B73;
+}
+
+.story-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.story-card h3{
+    text-align:center;
+    margin-top:15px;
+    font-weight:400;
+}
+
+.post-content {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .post-number {
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.68rem;
+      color: #6f4a7d;
+      margin-bottom: 1rem;
+    }
+
+    .post-title {
+      font-size: clamp(1.7rem, 2.4vw, 2.15rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .meaning {
+      font-size: 1.08rem;
+      color: #6f4a7d;
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      margin-top: auto;
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.68rem;
+      color: #6f4a7d;
+}
+
+.blog-section {
+    width: 92%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 7rem 0 4rem;
+}
+.section-kicker {
+    font-size: 2.5rem;
+    color: #6b5b73;
+}
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+.post-card {
+    background: #fffaf1;
+    border: 1px solid #6f4a7d;
+    transition: 0.3s ease;
+    overflow: hidden;
+    color: #6b5b73;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.post-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.section-title-image {
+    display: block;
+    margin-bottom: 6rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* BUTTONS */
+
+.cta{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+padding-bottom:110px;
+
+flex-wrap:wrap;
+
+}
+
+.cta button{
+
+padding:
+
+16px 34px;
+
+background:transparent;
+
+border:
+
+1px solid #7C6587;
+
+border-radius:40px;
+
+color:#7C6587;
+
+letter-spacing:2px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cta button:hover{
+
+background:#7C6587;
+
+color:white;
+
+}
+
+/* FOOTER */
+
+footer{
+
+padding:
+
+80px 25px;
+
+border-top:
+
+1px solid #E7DED8;
+
+text-align:center;
+
+}
+
+.footer-image{
+
+width:-10px;
+
+opacity:.75;
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+color:#8A7F90;
+
+letter-spacing:2px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+
+padding:18px;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+nav a{
+
+margin:0 8px;
+
+font-size:.8rem;
+
+}
+
+.hero{
+
+height:60vh;
+
+}
+
+.featured-card{
+
+flex-direction:column;
+
+}
+
+.featured-card img{
+
+width:100%;
+
+}
+
+.quote-image {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 0;
+}
+
+.quote-image img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.featured-text{
+
+padding:35px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+WILDFLOWER COLLECTIVE
+
+</div>
+
+<nav>
+
+<a href="index.html">
+
+HOME
+
+</a>
+
+<a href="blog.html">
+
+BLOG
+
+</a>
+
+<a href="about.html">
+
+ABOUT
+
+</a>
+
+<a href="contact.html">
+
+CONTACT
+
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<img
+src="images/dog-photo-hero.jpg"
+alt="Wildflower Hero">
+
+</section>
+
+
+<section class="intro">
+
+Stories about grief,
+
+transformation,
+
+spiritual awakening,
+
+healing,
+
+family,
+
+and learning how to rebuild who we are when life becomes unrecognizable.
+
+</section>
+
+
+<section class="butterfly-explanation">
+
+<img
+src="images/butterfly-effect-explanation.png"
+alt="Butterfly Effect">
+
+</section>
+
+<section class="blog-section">
+
+    <div class="section-kicker"></div>
+<img
+src="https://see.fontimg.com/api/rf5/rgX3L/YzdkZmYyY2QwZjRhNGRiZDhmZDk0MGM1MTAzOWViZmYudHRm/VGhlIHBpZWNlcyB0byBiZWdpbiB3aXRoLi4u/gustatory-delight-regular.png?r=fs&h=98&w=1500&fg=6B5B73&bg=FFFFFF&tb=1&s=65"
+alt="The pieces to begin with."
+class="section-title-image">
+
+</h2>
+
+
+
+<div class="posts-grid">
+
+<a class="post-card" href="blog.posts.html/Butterfly-Effect.html">
+    <img src="images/Butterfly-outside-the-er.jpg" alt="Butterfly Effect">
+    <div class="post-content">
+        <div class="post-title">Butterfly Effect</div>
+        <div class="read-more">Read Story</div>
+    </div>
+</a>
+
+<a class="post-card" href="blog.posts.html/take-care-of-her.html">
+    <img src="images/Take-Care-Of-Her.jpg" alt="Take Care Of Her">
+    <div class="post-content">
+        <div class="post-title">Take Care Of Her</div>
+        <div class="meaning">The words that stayed with me long after they were spoken.</div>
+        <div class="read-more">Read Story</div>
+    </div>
+</a>
+
+<a class="post-card" href="blog.posts.html/Its-Been-A-While.html">
+    <img src="images/Its-Been-A-while.jpg" alt="It's Been A While">
+    <div class="post-content">
+        <div class="post-title">It's Been A While</div>
+        <div class="meaning">A song, a memory, and the people we miss along the way.</div>
+        <div class="read-more">Read Story</div>
+    </div>
+</a>
+
+<a class="post-card" href="blog.posts.html/The-One-Who-Never-Left.html">
+    <img src="images/The-One-Who-Never-Left.jpg" alt="The One Who Never Left">
+    <div class="post-content">
+        <div class="post-title">The One Who Never Left</div>
+        <div class="meaning">When everything else changed, one soul stayed beside me through it all.</div>
+        <div class="read-more">Read Story</div>
+    </div>
+</a>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<a href="blog.html">
+
+<button>
+
+READ THE BLOG
+
+</button>
+
+</a>
+
+<a href="about.html">
+
+<button>
+
+ABOUT ME
+
+</button>
+
+</a>
+
+</section>
+
+
+<footer>
+
+<img
+src="images/Footer-Image.jpg"
+class="Footer Image">
+
+<p>
+
+</p>
+
+</footer>
+
+<footer class="site-footer">
+    <p>© 2026 Wildflower Collective. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>

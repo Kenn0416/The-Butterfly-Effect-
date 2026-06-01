@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | WILDFLOWER COLLECTIVE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia, serif:wght@300;400;500;600&family=Georgia:wght@300;400;500&family=Serif&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3f0;
+      color: #4b4453;
+      font-family: Georgia, serif;
+      line-height: 1.9;
+overflow-x:hidden;
+    }
+
+    nav {
+      width: 100%;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f7f3f0;
+      text-transform:uppercase;
+      font-family:Georgia, serif;
+    }
+
+    .logo {
+      color: #6b5b73;
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      font-weight:300;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      text-decoration:none;
+    }
+
+    .nav-links a {
+      color: #6b5b73;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+.hero {
+  height: 100%;
+  background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)),
+    url('images/blog-hero.jpg') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+    .hero-content {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 9vw, 6rem);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+
+    .blog-section {
+      width: 92%;
+      max-width: 1300px;
+      margin: auto;
+      padding: 7rem 0 4rem;
+    }
+
+    .section-kicker {
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 3rem;
+      color: #6f4a7d;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1;
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.4rem;
+
+    }
+
+    .post-card {
+      background: #fffaf1;
+      border: 1px solid #6f4a7d;
+      transition: 0.3s ease;
+      overflow: hidden;
+      color: #6f4a7d;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .post-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(111,74,125,0.14);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      background: #f7f3f0;
+      display: block;
+    }
+
+    .post-content {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .post-number {
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.68rem;
+      color: #6f4a7d;
+      margin-bottom: 1rem;
+    }
+
+    .post-title {
+      font-size: clamp(1.7rem, 2.4vw, 2.15rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .meaning {
+      font-size: 1.08rem;
+      color: #6f4a7d;
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      margin-top: auto;
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.68rem;
+      color: #6f4a7d;
+    }
+
+    .more-stories {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+      padding: 3rem 0 7rem;
+      background: #fbf4e8;
+    }
+
+    .story-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .story-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid #6f4a7d;
+      background: #fffaf1;
+      color: #6f4a7d;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .story-links a:hover {
+      background: #6f4a7d;
+      color: #fffaf1;
+      transform: translateY(-3px);
+    }
+
+    .story-links a:hover strong {
+      text-decoration: none;
+    }
+
+    .story-links span,
+    .story-links em {
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.68rem;
+      color: #6f4a7d;
+      font-style: normal;
+    }
+
+    .story-links a:hover span,
+    .story-links a:hover em {
+      color: #fffaf1;
+    }
+
+    .story-links strong {
+      font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 5rem 2rem;
+      color: #6f4a7d;
+      font-family: Georgia, serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+
+    }
+
+
+.footer-image{
+
+width:1000px;
+
+opacity:.75;
+
+margin-bottom:20px;
+
+position:center;
+
+transform: translateX(70px);
+
+
+}
+    @media(max-width: 1100px) {
+      .posts-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .post-card img {
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .post-content {
+        padding: 1rem;
+      }
+
+      .post-title {
+        font-size: 1.35rem;
+      }
+
+      .meaning {
+        display: none;
+      }
+
+      }
+    @media(max-width: 520px) {
+      nav {
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        display: inline-block;
+        margin: 0 0 0.5rem 1rem;
+      }
+
+      .posts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .story-links {
+        grid-template-columns: 1fr;
+      }
+
+      .post-card img {
+        height: 150px;
+      }
+
+      .post-content {
+        padding: 1rem;
+      }
+
+      .post-title {
+        font-size: 1.35rem;
+      }
+
+      .meaning {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">WILDFLOWER COLLECTIVE</a>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="blog.html">BLOG</a>
+      <a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>The Butterfly Effect</h1>
+      
+<p>
+
+Stories about grief, healing, family, and awakening your soul.
+
+</p>
+    
+
+</div>
+  </section>
+
+  <section class="blog-section">
+  </a>
+
+</div>
+
+<section class="more-stories">
+    <div class="section-kicker">All Stories</div>
+
+    <div class="story-links">
+
+<a href="blog.posts.html/Honey.html">
+  <span>Post 05</span>
+  <strong>Honey</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/The-Tennis-Ball.html">
+  <span>Post 11:11</span>
+  <strong>The Tennis Ball</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/The-Sound-Of-Silence.html">
+  <span>Post 06</span>
+  <strong>The Sound Of Silence</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/Normal.html">
+   <span>Post 07</span>
+   <strong>Normal</strong>
+   <em>Open</em>
+</a>
+      <a href="blog.posts.html/Momma.html">
+        <span>Post 06</span>
+        <strong>Momma.</strong>
+        <em>Open</em>
+      </a>
+
+<a href="blog.posts.html/Learning-To-Feel-Safe.html">
+  <span>Post 07</span>
+  <strong>Learning To Feel Safe</strong>
+  <em>Open</em>
+</a>
+        <a href="blog.posts.html/Becoming-Myself-Again.html">
+        <span>Post 08</span>
+        <strong>Finding Myself Again</strong>
+        <em>Open</em>
+      </a> 
+
+      <a href="blog.posts.html/Emotional-Safety.html">
+        <span>Post 09</span>
+        <strong>Emotional Safety</strong>
+        <em>Open</em>
+      </a>
+
+    <a href="blog.posts.html/Rebuilding-Again.html">
+  <span>Post 10</span>
+  <strong>Rebuilding Again</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/Kindness.html">
+  <span>Post 11</span>
+  <strong>Kindness</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/Survival.html">
+  <span>Post 12</span>
+  <strong>Survival</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/No-Longer-Unapologetically-Me.html">
+  <span>Post 13</span>
+  <strong>No Longer Unapologetically Me</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/This-Weight.html">
+  <span>Post 14</span>
+  <strong>This Weight</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/Normal.html">
+  <span>Post 15</span>
+  <strong>Normal</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/The-Light-At-The-End-Of-The-Tunnel.html">
+  <span>Post 16</span>
+  <strong>The Light At The End Of The Tunnel</strong>
+  <em>Open</em>
+</a>
+
+
+      <a href="blog.posts.html/When-Did-We-Become-This.html">
+        <span>Post 17</span>
+        <strong>When Did We Become This</strong>
+        <em>Open</em>
+      </a>
+
+      <a href="blog.posts.html/Mothers-Day.html">
+        <span>Post 18</span>
+        <strong>Mother's Day.</strong>
+        <em>Open</em>
+      </a>
+
+      <a href="blog.posts.html/The-Part-People-Didn't-See.html">
+        <span>Post 19</span>
+        <strong>The Part People Didn't See</strong>
+        <em>Open</em>
+      </a>
+
+<a href="blog.posts.html/Healing.html">
+  <span>Story</span>
+  <strong>Healing</strong>
+  <em>Open</em>
+</a>
+
+<a href="blog.posts.html/The-One-Who-Never-Left.html">
+  <span>Story</span>
+  <strong>The One Who Never Left</strong>
+  <em>Open</em>
+</a>
+
+    </div>
+</section>
+
+<img
+src="images/Footer-Image.jpg"
+class="footer-image">
+
+
+<footer class="site-footer">
+    <p>© 2026 Wildflower Collective. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
