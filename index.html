@@ -542,11 +542,15 @@ text-align:center;
 
 .footer-image{
 
-width:-10px;
+width:100%;
+
+max-width:1000px;
 
 opacity:.75;
 
 margin-bottom:20px;
+
+display:block;
 
 }
 
@@ -560,6 +564,18 @@ letter-spacing:2px;
 
 /* MOBILE */
 
+@media(max-width:1024px){
+
+  .stories-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
 @media(max-width:768px){
 
 header{
@@ -572,11 +588,17 @@ gap:12px;
 
 }
 
+nav{
+  width:100%;
+  justify-content:center;
+  gap:10px;
+}
+
 nav a{
 
-margin:0 8px;
+margin:0 5px;
 
-font-size:.8rem;
+font-size:.85rem;
 
 }
 
@@ -616,6 +638,158 @@ width:100%;
 .featured-text{
 
 padding:35px;
+
+}
+
+.intro{
+  padding:30px 20px 50px;
+  font-size:1rem;
+}
+
+.stories-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.home-stories{
+  padding:0 15px;
+  margin:40px auto;
+}
+
+.posts-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.post-card img {
+  height: 150px;
+}
+
+.cta{
+  padding-bottom:50px;
+  gap:15px;
+}
+
+.cta button{
+  padding:12px 25px;
+  font-size:0.9rem;
+}
+
+.footer-image{
+  max-width:90%;
+  margin-bottom:15px;
+}
+
+footer{
+  padding:40px 15px;
+}
+
+}
+
+@media(max-width:480px){
+
+header{
+  padding:12px;
+}
+
+.logo{
+  font-size:1rem;
+  letter-spacing:1px;
+}
+
+nav a{
+  margin:0 3px;
+  font-size:0.7rem;
+  letter-spacing:1px;
+}
+
+.hero{
+  height:50vh;
+}
+
+.intro{
+  padding:20px 15px 30px;
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+.butterfly-explanation{
+  padding:0 10px 40px;
+}
+
+.featured-card{
+  margin:0 10px;
+}
+
+.featured-text{
+  padding:25px;
+}
+
+.featured-text h3{
+  font-size:1.5rem;
+}
+
+.featured-text p{
+  font-size:0.95rem;
+}
+
+.featured-btn{
+  padding:10px 20px;
+  font-size:0.8rem;
+}
+
+.stories-grid{
+  grid-template-columns:1fr;
+  gap:10px;
+}
+
+.home-stories{
+  padding:0 10px;
+  margin:30px auto;
+}
+
+.home-stories h2{
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+
+.post-card img {
+  height: 120px;
+}
+
+.posts-grid {
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.section-title-image {
+  margin-bottom: 2rem;
+}
+
+.cta{
+  padding-bottom:30px;
+  flex-direction:column;
+  gap:10px;
+}
+
+.cta button,
+.cta a button{
+  width:100%;
+  padding:12px 20px;
+}
+
+footer{
+  padding:25px 10px;
+}
+
+.footer-image{
+  max-width:100%;
+  margin-bottom:10px;
+}
+
+footer p{
+  font-size:0.8rem;
+}
 
 }
 
@@ -702,11 +876,9 @@ alt="Butterfly Effect">
 
     <div class="section-kicker"></div>
 <img
-src="https://see.fontimg.com/api/rf5/rgX3L/YzdkZmYyY2QwZjRhNGRiZDhmZDk0MGM1MTAzOWViZmYudHRm/VGhlIHBpZWNlcyB0byBiZWdpbiB3aXRoLi4u/gustatory-delight-regular.png?r=fs&h=98&w=1500&fg=6B5B73&bg=FFFFFF&tb=1&s=65"
+src="https://see.fontimg.com/api/rf5/rgX3L/YzdkZmYyY2QwZjRhNGRiZDhmZDk0MGM1MTAzOWViZmYudHRm/VGhlIHBpZWNlcyB0byBiZWdpbiB3aXRoLi4u/gustatory-delight-regular.png?r=fs&h=98&w=1500&fg=6B5B73&bg=FFFFFF"
 alt="The pieces to begin with."
 class="section-title-image">
-
-</h2>
 
 
 
@@ -780,11 +952,10 @@ ABOUT ME
 
 <img
 src="images/Footer-Image.jpg"
-class="Footer Image">
+class="footer-image"
+alt="Footer Image">
 
-<p>
-
-</p>
+<p></p>
 
 </footer>
 
