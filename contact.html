@@ -75,6 +75,8 @@ border-bottom:
 
 1px solid #E7DED8;
 
+z-index:999;
+
 }
 
 .logo{
@@ -84,6 +86,18 @@ font-size:1.3rem;
 letter-spacing:2px;
 
 color:#6B5B73;
+
+font-weight:300;
+
+}
+
+nav{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
 
 }
 
@@ -98,6 +112,14 @@ color:#6B5B73;
 font-size:.9rem;
 
 letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+opacity:.7;
 
 }
 
@@ -166,13 +188,32 @@ font-size:1rem;
 
 font-family:Georgia,serif;
 
+color:#4B4453;
+
+width:100%;
+
+transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+outline:none;
+
+border-color:#7C6587;
+
+box-shadow:0 0 0 3px rgba(124,101,135,0.1);
+
 }
 
 textarea{
 
 height:180px;
 
-resize:none;
+resize:vertical;
+
+min-height:120px;
 
 }
 
@@ -200,11 +241,21 @@ letter-spacing:2px;
 
 transition:.3s;
 
+font-weight:500;
+
 }
 
 button:hover{
 
 opacity:.85;
+
+transform:translateY(-2px);
+
+}
+
+button:active{
+
+transform:translateY(0);
 
 }
 
@@ -212,7 +263,7 @@ footer{
 
 padding:
 
-60px;
+60px 30px;
 
 text-align:center;
 
@@ -224,20 +275,350 @@ color:#8A7F90;
 
 }
 
-.signature img {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
+.footer-image{
+
+width:100%;
+
+max-width:220px;
+
+opacity:.7;
+
+margin-bottom:20px;
+
+display:block;
+
+height:auto;
+
+}
+
+footer p{
+
+letter-spacing:2px;
+
+}
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.contact{
+
+padding:80px 30px;
+
+}
+
+}
+
+/* TABLET/MOBILE */
+
+@media(max-width:768px){
+
+header{
+
+padding:15px 20px;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.logo{
+
+font-size:1.1rem;
+
+}
+
+nav{
+
+justify-content:center;
+
+gap:5px;
+
+}
+
+nav a{
+
+margin-left:15px;
+
+font-size:0.8rem;
+
+letter-spacing:1px;
+
+}
+
+.contact{
+
+padding:60px 20px;
+
+}
+
+.contact h1{
+
+font-size:2.2rem;
+
+margin-bottom:20px;
+
+}
+
+.contact p{
+
+margin-bottom:30px;
+
+font-size:0.95rem;
+
+}
+
+input,
+textarea{
+
+padding:14px;
+
+font-size:1rem;
+
+border-radius:15px;
+
+}
+
+button{
+
+padding:15px;
+
+font-size:0.95rem;
+
+}
+
+footer{
+
+padding:40px 20px;
 
 }
 
 .footer-image{
 
-width:220px;
+max-width:180px;
 
-opacity:.7;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:520px){
+
+header{
+
+padding:12px 15px;
+
+gap:8px;
+
+}
+
+.logo{
+
+font-size:0.95rem;
+
+letter-spacing:1px;
+
+}
+
+nav{
+
+width:100%;
+
+gap:3px;
+
+}
+
+nav a{
+
+margin-left:8px;
+
+font-size:0.65rem;
+
+letter-spacing:0.5px;
+
+padding:5px 8px;
+
+}
+
+.contact{
+
+padding:40px 15px;
+
+}
+
+.contact h1{
+
+font-size:1.8rem;
+
+margin-bottom:15px;
+
+line-height:1.2;
+
+}
+
+.contact p{
+
+margin-bottom:25px;
+
+font-size:0.9rem;
+
+line-height:1.6;
+
+}
+
+form{
+
+gap:15px;
+
+}
+
+input,
+textarea{
+
+padding:12px;
+
+font-size:0.95rem;
+
+border-radius:12px;
+
+}
+
+textarea{
+
+height:140px;
+
+min-height:100px;
+
+}
+
+button{
+
+padding:14px;
+
+font-size:0.9rem;
+
+letter-spacing:1px;
+
+}
+
+footer{
+
+padding:30px 15px;
+
+}
+
+.footer-image{
+
+max-width:150px;
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+font-size:0.8rem;
+
+letter-spacing:1px;
+
+}
+
+}
+
+/* SMALL PHONE */
+
+@media(max-width:360px){
+
+header{
+
+padding:10px 12px;
+
+}
+
+.logo{
+
+font-size:0.85rem;
+
+letter-spacing:0.5px;
+
+}
+
+nav a{
+
+font-size:0.6rem;
+
+margin-left:5px;
+
+letter-spacing:0.3px;
+
+}
+
+.contact{
+
+padding:30px 12px;
+
+}
+
+.contact h1{
+
+font-size:1.5rem;
+
+margin-bottom:12px;
+
+}
+
+.contact p{
+
+font-size:0.85rem;
 
 margin-bottom:20px;
+
+line-height:1.5;
+
+}
+
+input,
+textarea{
+
+padding:10px;
+
+font-size:0.9rem;
+
+border-radius:10px;
+
+}
+
+button{
+
+padding:12px;
+
+font-size:0.85rem;
+
+letter-spacing:0.5px;
+
+}
+
+footer{
+
+padding:20px 12px;
+
+}
+
+.footer-image{
+
+max-width:120px;
+
+margin-bottom:12px;
+
+}
+
+footer p{
+
+font-size:0.75rem;
+
+}
 
 }
 
@@ -296,9 +677,7 @@ Get In Touch
 
 <p>
 
-Questions,
-collaboration opportunities,
-or simply want to connect?
+Questions, collaboration opportunities, or simply want to connect?
 
 I'd love to hear from you.
 
@@ -313,18 +692,21 @@ method="POST">
 type="text"
 name="name"
 placeholder="Your Name"
-required>
+required
+aria-label="Your Name">
 
 <input
 type="email"
 name="email"
 placeholder="Your Email"
-required>
+required
+aria-label="Your Email">
 
 <textarea
 name="message"
 placeholder="Your Message"
-required>
+required
+aria-label="Your Message">
 
 </textarea>
 
@@ -337,12 +719,14 @@ SEND MESSAGE
 
 </form>
 
-</section
+</section>
+
 <footer>
 
 <img
 src="images/Footer-Image.jpg"
-class="Footer-Image">
+class="footer-image"
+alt="Wildflower Collective Footer">
 
 <p>
 
@@ -350,11 +734,12 @@ Wildflower Collective
 
 </p>
 
-
 </footer>
 
 <footer class="site-footer">
     <p>© 2026 Wildflower Collective. All rights reserved.</p>
-</footer></body>
+</footer>
+
+</body>
 
 </html>
