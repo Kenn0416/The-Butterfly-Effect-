@@ -13,11 +13,11 @@ nav{display:flex;gap:25px;}
 nav a{text-decoration:none;color:#6B5B73;letter-spacing:2px;font-size:.9rem;white-space:nowrap;}
 .blog-post{max-width:850px;margin:auto;padding:80px 30px;}
 .article-image{width:100%;border-radius:25px;margin-bottom:50px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:block;}
-.honey-collage{width:min(980px,92vw);margin:30px 50% 42px;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;}
+.honey-collage{width:min(980px,92vw);margin:30px 50% 42px;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;grid-auto-flow:dense;}
 .honey-collage .tile{height:220px;background:#fffaf1;border:1px solid #efe3ea;border-radius:22px;box-shadow:0 8px 24px rgba(0,0,0,.07);overflow:hidden;display:flex;align-items:center;justify-content:center;padding:0;}
 .honey-collage .tile.large{grid-column:span 2;grid-row:span 2;height:452px;}.honey-collage .tile.wide{grid-column:span 2;}.honey-collage .tile.tall{grid-row:span 2;height:452px;}.honey-collage img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;}
-@media(max-width:768px){.honey-collage{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:24px 50% 34px;}.honey-collage .tile{height:210px;}.honey-collage .tile.large,.honey-collage .tile.wide,.honey-collage .tile.tall{grid-column:span 2;grid-row:span 1;height:280px;}}
-@media(max-width:480px){.honey-collage{width:94vw;gap:8px;}.honey-collage .tile{height:180px;border-radius:18px;}.honey-collage .tile.large,.honey-collage .tile.wide,.honey-collage .tile.tall{height:240px;}}
+@media(max-width:768px){.honey-collage{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:24px 50% 34px;}.honey-collage .tile{height:170px;}.honey-collage .tile.large{grid-column:span 2;grid-row:span 1;height:280px;}.honey-collage .tile.wide{grid-column:span 2;height:210px;}.honey-collage .tile.tall{grid-column:span 1;grid-row:span 2;height:350px;}}
+@media(max-width:480px){.honey-collage{width:94vw;gap:8px;}.honey-collage .tile{height:145px;border-radius:18px;}.honey-collage .tile.large{height:230px;}.honey-collage .tile.wide{height:170px;}.honey-collage .tile.tall{height:300px;}}
 h1{text-align:center;color:#6B5B73;font-size:3rem;font-weight:300;margin-bottom:60px;}
 .blog-post p{margin-bottom:28px;font-size:1.15rem;}
 .final-line{margin-top:50px;font-style:italic;color:#6B5B73;}
@@ -102,9 +102,6 @@ footer{color:#812253;}
 </header>
 <main>
 <section class="blog-post">
-<p class="post-kicker">The Butterfly Effect</p>
-<h1>Honey</h1>
-<p class="post-byline">Kendall Evans &middot; January 25, 2026</p>
 <div class="honey-collage" aria-label="Honey photo collage">
 <figure class="tile large"><img src="honey-collage-01.jpg" alt="Honey resting on her blue bed"></figure>
 <figure class="tile tall"><img src="honey-collage-02.jpg" alt="Honey cuddling beside Kendall"></figure>
@@ -116,6 +113,9 @@ footer{color:#812253;}
 <figure class="tile"><img src="honey-collage-08.jpg" alt="Honey resting close in a blanket"></figure>
 <figure class="tile"><img src="honey-collage-04.jpg" alt="Honey walking near the lake"></figure>
 </div>
+<p class="post-kicker">The Butterfly Effect</p>
+<h1>Honey</h1>
+<p class="post-byline">Kendall Evans &middot; January 25, 2026</p>
 <hr class="post-divider">
 
 <p>I think one of the greatest gifts in my life arrived on four legs.</p>
