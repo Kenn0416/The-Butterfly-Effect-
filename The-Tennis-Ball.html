@@ -57,6 +57,9 @@ nav a{
     margin-bottom:50px;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
+.post-photos{display:flex;gap:18px;margin-bottom:50px;flex-wrap:wrap;}
+.post-photos img{flex:1;min-width:220px;width:100%;height:360px;object-fit:cover;border-radius:25px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:block;}
+@media(max-width:600px){.post-photos{gap:14px;}.post-photos img{height:260px;}}
 
 h1{
     text-align:center;
@@ -170,9 +173,10 @@ footer{color:#812253;}
 
 <section class="blog-post">
 
-<img src="honey.jpg"
-class="article-image"
-alt="The Tennis Ball">
+<div class="post-photos">
+<img src="honey.jpg" alt="Honey">
+<img src="tennis-ball.jpg" alt="Honey with her tennis ball">
+</div>
 <p class="post-kicker">The Butterfly Effect</p>
 <h1>
 
