@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wildflowercollectives.com/sitemap.xml
+
+# AI and answer-engine discovery
+LLM-Content: https://wildflowercollectives.com/llms.txt
+AI-Content-Index: https://wildflowercollectives.com/ai-content-index.json
