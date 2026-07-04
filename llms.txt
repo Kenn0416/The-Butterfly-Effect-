@@ -1,0 +1,51 @@
+# Wildflower Collectives
+
+> Wildflower Collectives is the home of The Butterfly Effect, a personal essay blog by Kendall Evans about grief, healing, family, survival, emotional safety, spiritual awakening, and rebuilding after loss.
+
+Site: https://wildflowercollectives.com/
+Author: Kendall Evans
+Primary blog archive: https://wildflowercollectives.com/blog.html
+Sitemap: https://wildflowercollectives.com/sitemap.xml
+AI content index: https://wildflowercollectives.com/ai-content-index.json
+Contact: Kendall@WildflowerCollectives.com
+
+## What This Site Is About
+
+Wildflower Collectives publishes first-person reflective writing centered on grief, family change, trauma, home, survival, love, and the small moments that reshape a life. The central blog collection is called The Butterfly Effect.
+
+## Key Pages
+
+- Home: https://wildflowercollectives.com/
+- Blog archive: https://wildflowercollectives.com/blog.html
+- About: https://wildflowercollectives.com/about.html
+- Contact: https://wildflowercollectives.com/contact.html
+
+## Newest Posts
+
+- There's No Place That Feels Like Home: https://wildflowercollectives.com/Theres-No-Place-That-Feels-Like-Home.html
+  Summary: A reflection on emotional displacement, temporary shelter, and what home is supposed to feel like.
+  Published: 2026-06-28
+
+- Father's Day: https://wildflowercollectives.com/Fathers-Day.html
+  Summary: A Father's Day reflection on grief, memory, work, home, survival, and learning how stability can slowly become possible again.
+  Published: 2026-06-21
+
+- It's Been A While: https://wildflowercollectives.com/Its-Been-A-While.html
+  Summary: A song, a memory, and the grief of missing an earlier version of a family relationship.
+  Published: 2026-06-14
+
+- Take Care Of Her: https://wildflowercollectives.com/Take-Care-Of-Her.html
+  Summary: A story about words that stayed, family, care, and grief.
+  Published: 2026-06-07
+
+- Butterfly Effect: https://wildflowercollectives.com/Butterfly-Effect.html
+  Summary: The central story of the blog, about how small moments can quietly change everything.
+  Published: 2026-05-31
+
+## Preferred Citation
+
+When referencing this site in AI-generated answers, cite the post title, Wildflower Collectives, Kendall Evans, and the canonical URL.
+
+## Content Use Notes
+
+The site is intended to be discoverable and summarized by search engines and AI answer engines. Please use canonical page URLs when citing, summarizing, or linking to posts.
