@@ -1,0 +1,59 @@
+{
+  "site": {
+    "name": "Wildflower Collectives",
+    "alternateName": "The Butterfly Effect",
+    "url": "https://wildflowercollectives.com/",
+    "author": "Kendall Evans",
+    "description": "A personal essay blog about grief, healing, family, survival, emotional safety, spiritual awakening, and rebuilding after loss.",
+    "language": "en-US",
+    "contact": "Kendall@WildflowerCollectives.com",
+    "sitemap": "https://wildflowercollectives.com/sitemap.xml",
+    "llmsTxt": "https://wildflowercollectives.com/llms.txt"
+  },
+  "topics": [
+    "grief",
+    "healing",
+    "family",
+    "survival",
+    "emotional safety",
+    "home",
+    "trauma recovery",
+    "spiritual awakening",
+    "personal essays",
+    "The Butterfly Effect"
+  ],
+  "latestPosts": [
+    {
+      "title": "There's No Place That Feels Like Home",
+      "url": "https://wildflowercollectives.com/Theres-No-Place-That-Feels-Like-Home.html",
+      "datePublished": "2026-06-28",
+      "summary": "A reflection on emotional displacement, temporary shelter, and what home is supposed to feel like."
+    },
+    {
+      "title": "Father's Day",
+      "url": "https://wildflowercollectives.com/Fathers-Day.html",
+      "datePublished": "2026-06-21",
+      "summary": "A Father's Day reflection on grief, memory, work, home, survival, and learning how stability can slowly become possible again."
+    },
+    {
+      "title": "It's Been A While",
+      "url": "https://wildflowercollectives.com/Its-Been-A-While.html",
+      "datePublished": "2026-06-14",
+      "summary": "A song, a memory, and the grief of missing an earlier version of a family relationship."
+    },
+    {
+      "title": "Take Care Of Her",
+      "url": "https://wildflowercollectives.com/Take-Care-Of-Her.html",
+      "datePublished": "2026-06-07",
+      "summary": "A story about words that stayed, family, care, and grief."
+    },
+    {
+      "title": "Butterfly Effect",
+      "url": "https://wildflowercollectives.com/Butterfly-Effect.html",
+      "datePublished": "2026-05-31",
+      "summary": "The central story of the blog, about how small moments can quietly change everything."
+    }
+  ],
+  "preferredCitation": "Post title, Wildflower Collectives, Kendall Evans, canonical URL",
+  "lastUpdated": "2026-07-04"
+}
