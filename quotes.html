@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#f7f3f0;color:#663760;font-family:Georgia,serif;line-height:1.9;overflow-x:hidden;}
+
+/* NAV */
+header{
+position:sticky;
+top:0;
+background:rgba(247,243,240,.95);
+backdrop-filter:blur(10px);
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #E7DED8;
+z-index:999;
+}
+
+.logo{
+font-size:1.3rem;
+letter-spacing:2px;
+color:#663760;
+font-weight:300;
+}
+
+nav a{
+margin-left:28px;
+text-decoration:none;
+letter-spacing:2px;
+font-size:.85rem;
+color:#762254ce;
+}
+
+nav a:hover{
+opacity:.6;
+}
+
+/* GALLERY SECTION */
+.gallery-intro{
+max-width:900px;
+margin:80px auto 60px;
+text-align:center;
+padding:0 40px;
+}
+
+.gallery-intro h1{
+font-size:2.8rem;
+font-weight:300;
+color:#792253;
+margin-bottom:20px;
+}
+
+.gallery-intro p{
+font-size:1.1rem;
+color:#663760;
+}
+
+/* MASONRY GALLERY */
+.gallery-container{
+max-width:1200px;
+margin:0 auto;
+padding:40px;
+}
+
+.masonry-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+grid-auto-flow:dense;
+}
+
+.masonry-item{
+position:relative;
+overflow:hidden;
+border-radius:16px;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+transition:all 0.3s ease;
+background:#fff;
+}
+
+.masonry-item:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 32px rgba(0,0,0,.15);
+}
+
+.masonry-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* Create varied heights for visual interest */
+.masonry-item:nth-child(3n+1){
+grid-row:span 2;
+}
+
+.masonry-item:nth-child(5n+2){
+grid-row:span 1;
+}
+
+.masonry-item:nth-child(7n+3){
+grid-row:span 2;
+}
+
+/* FOOTER */
+footer{
+padding:80px 25px;
+text-align:center;
+border-top:1px solid #E7DED8;
+margin-top:80px;
+color:#812253;
+letter-spacing:2px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+header{
+padding:18px;
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 8px;
+}
+
+.gallery-intro{
+margin:60px auto 40px;
+padding:0 25px;
+}
+
+.gallery-intro h1{
+font-size:2rem;
+}
+
+.gallery-container{
+padding:20px;
+}
+
+.masonry-grid{
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:12px;
+}
+
+.masonry-item:nth-child(3n+1),
+.masonry-item:nth-child(5n+2),
+.masonry-item:nth-child(7n+3){
+grid-row:span 1;
+}
+}
+
+@media(max-width:480px){
+.logo{
+font-size:1rem;
+}
+
+nav a{
+font-size:.7rem;
+margin:0 5px;
+}
+
+.gallery-intro h1{
+font-size:1.6rem;
+}
+
+.masonry-grid{
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:8px;
+}
+
+.gallery-container{
+padding:15px;
+}
+}
+</style>
+<title>Quotes | Wildflower Collectives</title>
+<meta name="description" content="A collection of visual quotes and affirmations about healing, resilience, and growth from Wildflower Collectives.">
+<meta name="author" content="Kendall Evans">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wildflowercollectives.com/quotes.html">
+<meta name="theme-color" content="#6f4a7d">
+<link rel="icon" href="/wildflower-logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Wildflower-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wildflower Collectives">
+<meta property="og:title" content="Quotes | Wildflower Collectives">
+<meta property="og:description" content="A collection of visual quotes and affirmations about healing, resilience, and growth.">
+<meta property="og:url" content="https://wildflowercollectives.com/quotes.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Quotes | Wildflower Collectives","description":"A collection of visual quotes and affirmations about healing, resilience, and growth from Wildflower Collectives.","url":"https://wildflowercollectives.com/quotes.html"}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3DTT50DR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BF3DTT50DR');</script>
+</head>
+<body>
+
+<header>
+<div class="logo">WILDFLOWER COLLECTIVES</div>
+<nav>
+<a href="index.html">HOME</a>
+<a href="blog.html">BLOG</a>
+<a href="quotes.html">QUOTES</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<section class="gallery-intro">
+<h1>Quote Collection</h1>
+<p>Words to inspire, uplift, and remind you that healing is possible. A visual collection of affirmations for your journey.</p>
+</section>
+
+<section class="gallery-container">
+<div class="masonry-grid">
+<div class="masonry-item"><img src="download (1).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (2).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (3).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (4).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (5).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (6).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (7).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (8).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (9).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (10).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (11).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (13).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (14).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (15).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (16).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (21).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (22).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (23).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (24).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="download (25).jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="The Brain's Betrayal_ The Hot And Cold Cycle Of Attention.jpg" alt="Inspirational quote"></div>
+<div class="masonry-item"><img src="💯.jpg" alt="Inspirational quote"></div>
+</div>
+</section>
+
+<blockquote>"Just like wildflowers, we can grow through places we never imagined we would survive."</blockquote>
+
+<footer class="site-footer"><p>&copy; 2026 Wildflower Collectives. All rights reserved.</p></footer>
+
+</body>
+</html>
