@@ -4,30 +4,568 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Georgia,serif;}body{background:#F7F3F0;color:#b98cad;line-height:1.9;overflow-x:hidden;}header{position:sticky;top:0;background:rgba(247,243,240,.95);backdrop-filter:blur(10px);padding:18px 50px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #E7DED8;z-index:999;}.logo{font-size:1.3rem;letter-spacing:2px;color:#663760;font-weight:300;}nav{display:flex;align-items:center;}nav a{margin-left:28px;text-decoration:none;letter-spacing:2px;font-size:.85rem;color:#762254ce;}nav a:hover{opacity:.6;}.hero{width:100%;}.hero img{width:100%;height:auto;display:block;}.brand-mark{text-align:center;padding:60px 0 40px;}.brand-mark img{width:180px;height:auto;}.intro{max-width:900px;margin:0 auto 80px;text-align:center;font-size:1.3rem;color:#663760;padding:0 40px;line-height:1.8;}.Butterfly-Effect{max-width:1000px;margin:0 auto 80px;padding:0 40px;}.Butterfly-Effect img{width:100%;height:auto;}.blog-section{padding:60px 40px;max-width:1200px;margin:0 auto;}.blog-section img:nth-of-type(1){width:100%;height:auto;display:block;margin-bottom:60px;}.posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}.post-card{text-decoration:none;overflow:hidden;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.08);transition:all 0.3s ease;display:flex;flex-direction:column;height:100%;}.post-card:hover{transform:translateY(-8px);box-shadow:0 12px 32px rgba(0,0,0,.15);}.post-card.featured{grid-column:span 2;}.post-card img{width:100%;height:250px;object-fit:cover;}.post-card.featured img{height:350px;}.post-content{padding:30px;background:#fff;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between;}.post-title{font-size:1.3rem;font-weight:600;color:#792253;margin-bottom:12px;}.meaning{font-size:.95rem;color:#663760;margin-bottom:15px;line-height:1.6;flex-grow:1;}.read-more{font-size:.8rem;color:#a76a8f;text-transform:uppercase;letter-spacing:2px;font-weight:500;margin-top:auto;}.cta{display:flex;gap:30px;justify-content:center;margin:100px 40px 60px;flex-wrap:wrap;}.cta button{padding:18px 45px;border:2px solid #663760;background:transparent;color:#663760;border-radius:40px;cursor:pointer;font-size:1rem;letter-spacing:2px;transition:.3s;font-weight:500;text-decoration:none;font-family:Georgia,serif;}.cta button:hover{background:#663760;color:#fff;}.cta a{text-decoration:none;}.site-footer{max-width:900px;margin:0 auto 60px;padding:32px 24px;background:#fffaf1;border:1px solid #E7DED8;text-align:center;color:#8A7F90;letter-spacing:2px;font-size:.85rem;}blockquote{max-width:900px;margin:60px auto 40px;padding:40px 30px;background:white;border-radius:30px;text-align:center;font-style:italic;color:#76627E;box-shadow:0 10px 30px rgba(0,0,0,.05);font-size:1.2rem;line-height:1.8;}@media(max-width:1024px){.blog-section{padding:40px 30px;}}@media(max-width:768px){header{padding:15px 20px;flex-direction:column;gap:12px;}.logo{font-size:1.1rem;}nav{justify-content:center;gap:18px;flex-wrap:wrap;}nav a{font-size:.8rem;letter-spacing:1px;}.hero img{height:auto;}.brand-mark{padding:40px 0 30px;}.brand-mark img{width:140px;}.intro{margin:0 auto 60px;font-size:1.1rem;padding:0 25px;}.Butterfly-Effect{margin:0 auto 60px;padding:0 25px;}.blog-section{padding:30px 20px;}.blog-section img:nth-of-type(1){margin-bottom:40px;}.posts-grid{grid-template-columns:1fr;gap:20px;}.post-card.featured{grid-column:span 1;}.post-card img{height:200px;}.post-card.featured img{height:240px;}.post-content{padding:20px;}.post-title{font-size:1.1rem;}.cta{margin:60px 20px 40px;gap:20px;}.cta button{padding:14px 30px;font-size:.9rem;}.site-footer{margin:0 20px 40px;padding:24px 16px;font-size:.75rem;}blockquote{margin:40px 20px;padding:25px 20px;font-size:1rem;}}@media(max-width:480px){.logo{font-size:.9rem;}nav{gap:10px;}nav a{font-size:.65rem;letter-spacing:.5px;}.intro{margin:0 auto 40px;font-size:1rem;padding:0 20px;}.Butterfly-Effect{margin:0 auto 40px;padding:0 20px;}.blog-section{padding:20px 15px;}.posts-grid{gap:15px;}.post-content{padding:15px;}.post-title{font-size:1rem;}.meaning{font-size:.9rem;}.cta{margin:40px 15px 30px;flex-direction:column;gap:10px;}.cta button{width:100%;}.site-footer{margin:0 15px 30px;}.site-footer p{font-size:.7rem;}blockquote{margin:30px 15px;padding:20px 15px;font-size:.95rem;}}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#f7f3f0;color:#663760;font-family:Georgia,serif;line-height:1.9;overflow-x:hidden;}
+
+/* HEADER/NAV */
+header{
+position:sticky;
+top:0;
+background:rgba(247,243,240,.95);
+backdrop-filter:blur(10px);
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #E7DED8;
+z-index:999;
+}
+
+.logo{
+font-size:1.3rem;
+letter-spacing:2px;
+color:#663760;
+font-weight:300;
+}
+
+nav{
+display:flex;
+gap:28px;
+}
+
+nav a{
+text-decoration:none;
+letter-spacing:2px;
+font-size:.85rem;
+color:#762254ce;
+transition:opacity 0.3s;
+}
+
+nav a:hover{
+opacity:.6;
+}
+
+/* HERO */
+.hero{
+width:100%;
+max-height:500px;
+overflow:hidden;
+}
+
+.hero img{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* BRAND MARK */
+.brand-mark{
+text-align:center;
+padding:60px 0 40px;
+}
+
+.brand-mark img{
+width:160px;
+height:auto;
+}
+
+/* INTRO */
+.intro{
+max-width:900px;
+margin:0 auto 80px;
+text-align:center;
+font-size:1.2rem;
+color:#663760;
+padding:0 40px;
+line-height:1.8;
+}
+
+/* BUTTERFLY EFFECT IMAGE */
+.Butterfly-Effect{
+max-width:1000px;
+margin:0 auto 80px;
+padding:0 40px;
+}
+
+.Butterfly-Effect img{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* SECTION TITLE */
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title img{
+width:100%;
+max-width:500px;
+height:auto;
+}
+
+/* BLOG SECTION */
+.blog-section{
+max-width:1200px;
+margin:0 auto 80px;
+padding:0 40px;
+}
+
+.posts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.post-card{
+text-decoration:none;
+overflow:hidden;
+border-radius:16px;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+transition:all 0.3s ease;
+display:flex;
+flex-direction:column;
+height:100%;
+background:white;
+}
+
+.post-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 32px rgba(0,0,0,.15);
+}
+
+.post-card.featured{
+grid-column:span 2;
+}
+
+.post-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.post-card.featured img{
+height:350px;
+}
+
+.post-content{
+padding:30px;
+flex-grow:1;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.post-title{
+font-size:1.3rem;
+font-weight:600;
+color:#792253;
+margin-bottom:12px;
+}
+
+.meaning{
+font-size:.95rem;
+color:#663760;
+margin-bottom:15px;
+line-height:1.6;
+flex-grow:1;
+}
+
+.read-more{
+font-size:.8rem;
+color:#a76a8f;
+text-transform:uppercase;
+letter-spacing:2px;
+font-weight:500;
+margin-top:auto;
+}
+
+/* CTA SECTION */
+.cta{
+max-width:1000px;
+margin:100px auto 80px;
+padding:0 40px;
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.cta a{
+text-decoration:none;
+}
+
+.cta button{
+padding:16px 32px;
+border:2px solid;
+background:white;
+border-radius:40px;
+cursor:pointer;
+font-size:1rem;
+letter-spacing:2px;
+transition:all 0.3s ease;
+font-weight:500;
+font-family:Georgia,serif;
+}
+
+.cta button:nth-child(1){
+border-color:#e8a5d5;
+color:#d97ab5;
+}
+
+.cta button:nth-child(1):hover{
+background:#fffaf1;
+border-color:#d97ab5;
+}
+
+.cta button:nth-child(2){
+border-color:#d4a5dd;
+color:#b889c4;
+}
+
+.cta button:nth-child(2):hover{
+background:#f5f0f8;
+border-color:#b889c4;
+}
+
+.cta button:nth-child(3){
+border-color:#c9b8d8;
+color:#a896bf;
+}
+
+.cta button:nth-child(3):hover{
+background:#f0ecf6;
+border-color:#a896bf;
+}
+
+/* BLOCKQUOTE */
+blockquote{
+max-width:900px;
+margin:80px auto 60px;
+padding:50px 40px;
+background:white;
+border-radius:20px;
+text-align:center;
+font-style:italic;
+color:#76627E;
+font-size:1.3rem;
+line-height:1.8;
+box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+
+/* FOOTER */
+.site-footer{
+padding:40px 40px;
+text-align:center;
+background:#f7f3f0;
+border-top:1px solid #E7DED8;
+font-size:13px;
+color:#a89aab;
+letter-spacing:2px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+header{
+padding:15px 20px;
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+font-size:1.1rem;
+}
+
+nav{
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:.8rem;
+letter-spacing:1px;
+}
+
+.hero{
+max-height:300px;
+}
+
+.brand-mark{
+padding:40px 0 30px;
+}
+
+.brand-mark img{
+width:120px;
+}
+
+.intro{
+margin:0 auto 60px;
+font-size:1.1rem;
+padding:0 25px;
+}
+
+.Butterfly-Effect{
+margin:0 auto 60px;
+padding:0 25px;
+}
+
+.blog-section{
+padding:0 25px;
+margin:0 auto 60px;
+}
+
+.posts-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.post-card.featured{
+grid-column:span 1;
+}
+
+.post-card img{
+height:200px;
+}
+
+.post-card.featured img{
+height:240px;
+}
+
+.post-content{
+padding:20px;
+}
+
+.post-title{
+font-size:1.1rem;
+}
+
+.cta{
+margin:60px auto 50px;
+padding:0 25px;
+gap:20px;
+}
+
+.cta button{
+padding:14px 26px;
+font-size:.95rem;
+}
+
+blockquote{
+margin:60px auto 40px;
+padding:30px 25px;
+font-size:1.1rem;
+}
+
+.site-footer{
+padding:30px 25px;
+font-size:12px;
+}
+}
+
+@media(max-width:480px){
+header{
+padding:12px 15px;
+}
+
+.logo{
+font-size:.95rem;
+}
+
+nav{
+gap:10px;
+}
+
+nav a{
+font-size:.65rem;
+letter-spacing:.5px;
+}
+
+.hero{
+max-height:200px;
+}
+
+.brand-mark{
+padding:30px 0 20px;
+}
+
+.brand-mark img{
+width:100px;
+}
+
+.intro{
+margin:0 auto 40px;
+font-size:1rem;
+padding:0 20px;
+}
+
+.Butterfly-Effect{
+margin:0 auto 40px;
+padding:0 20px;
+}
+
+.blog-section{
+padding:0 15px;
+margin:0 auto 40px;
+}
+
+.section-title img{
+max-width:300px;
+}
+
+.posts-grid{
+gap:15px;
+}
+
+.post-content{
+padding:15px;
+}
+
+.post-title{
+font-size:1rem;
+}
+
+.meaning{
+font-size:.9rem;
+}
+
+.cta{
+margin:40px auto 30px;
+padding:0 15px;
+flex-direction:column;
+gap:10px;
+}
+
+.cta button{
+width:100%;
+padding:12px 20px;
+font-size:.9rem;
+}
+
+blockquote{
+margin:40px auto 30px;
+padding:20px 15px;
+font-size:1rem;
+}
+
+.site-footer{
+padding:25px 15px;
+font-size:11px;
+}
+}
 </style>
 <title>Wildflower Collectives | The Butterfly Effect</title>
 <meta name="description" content="Wildflower Collectives is home to The Butterfly Effect, a personal blog where I share my experiences with grief, love, and healing in hopes of helping others through their own journeys.">
-<meta name="author" content="Kendall Evans"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="https://wildflowercollectives.com/"><meta name="theme-color" content="#6f4a7d"><link rel="icon" href="/wildflower-logo.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/Wildflower-logo.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Wildflower Collectives"><meta property="og:title" content="Wildflower Collectives | The Butterfly Effect"><meta property="og:url" content="https://wildflowercollectives.com/">
+<meta name="author" content="Kendall Evans">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wildflowercollectives.com/">
+<meta name="theme-color" content="#6f4a7d">
+<link rel="icon" href="/wildflower-logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Wildflower-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wildflower Collectives">
+<meta property="og:title" content="Wildflower Collectives | The Butterfly Effect">
+<meta property="og:url" content="https://wildflowercollectives.com/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Wildflower Collectives","alternateName":"The Butterfly Effect","url":"https://wildflowercollectives.com/","description":"Personal essays about grief, healing, family, and spiritual awakening","author":{"@type":"Person","name":"Kendall Evans"}}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3DTT50DR"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BF3DTT50DR');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3DTT50DR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BF3DTT50DR');</script>
 </head>
 <body>
-<header><div class="logo">WILDFLOWER COLLECTIVES</div><nav><a href="index.html">HOME</a><a href="blog.html">BLOG</a><a href="quotes.html">QUOTES</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a></nav></header>
-<section class="hero"><img src="dog-photo-hero.jpg" alt="Wildflower Hero"></section>
-<section class="brand-mark" aria-label="Wildflower Collectives logo"><img src="Wildflower-logo.png" alt="Wildflower Collectives logo"></section>
-<section class="intro">Stories about grief, transformation, spiritual awakening, healing, family, and learning how to rebuild who we are when life becomes unrecognizable.</section>
-<section class="Butterfly-Effect"><img src="Butterfly-Effect.jpg" alt="A Thousand Tiny Things"></section>
-<section class="blog-section"><img src="https://see.fontimg.com/api/rf5/rgX3L/YzdkZmYyY2QwZjRhNGRiZDhmZDk0MGM1MTAzOWViZmYudHRm/VGhlIHBpZWNlcyB0byBiZWdpbiB3aXRoLi4u/gustatory-delight-regular.png?r=fs&h=98&w=1500&fg=7c6587&bg=FFFFFF" alt="The pieces to begin with." class="section-title-image"><div class="posts-grid">
-<a class="post-card featured" href="Fathers-Day.html"><img src="fathers-day-peace-sign.jpg" alt="Father's Day peace sign flower wreath" style="object-position:center 25%;"><div class="post-content"><div class="post-title">Father's Day</div><div class="meaning">Grief, memory, home, and the version of life that does not come back the same way.</div><div class="read-more">Read Story</div></div></a>
-<a class="post-card" href="Its-Been-A-While.html"><img src="home-feature-its-been-a-while.jpg" alt="It's Been A While"><div class="post-content"><div class="post-title">It's Been A While</div><div class="meaning">A song, a memory, and the people we miss along the way.</div><div class="read-more">Read Story</div></div></a>
-<a class="post-card" href="Take-Care-Of-Her.html"><img src="home-feature-take-care-of-her.jpg" alt="Take Care Of Her"><div class="post-content"><div class="post-title">Take Care Of Her</div><div class="meaning">The words that stayed with me long after they were spoken.</div><div class="read-more">Read Story</div></div></a>
-<a class="post-card" href="Butterfly-Effect.html"><img src="butterfly-outside-the-er.jpg" alt="Butterfly Effect"><div class="post-content"><div class="post-title">Butterfly Effect</div><div class="meaning">The story at the heart of it all, how the smallest moments quietly change everything.</div><div class="read-more">Read Story</div></div></a>
-<a class="post-card" href="The-One-Who-Never-Left.html"><img src="home-feature-the-one-who-never-left.jpg" alt="The One Who Never Left"><div class="post-content"><div class="post-title">The One Who Never Left</div><div class="meaning">When everything else changed, one soul stayed beside me through it all.</div><div class="read-more">Read Story</div></div></a>
-</div></section>
-<section class="cta"><a href="blog.html"><button>READ THE BLOG</button></a><a href="quotes.html"><button>QUOTE COLLECTION</button></a><a href="about.html"><button>ABOUT ME</button></a></section>
+
+<header>
+<div class="logo">WILDFLOWER COLLECTIVES</div>
+<nav>
+<a href="index.html">HOME</a>
+<a href="blog.html">BLOG</a>
+<a href="quotes.html">QUOTES</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<section class="hero">
+<img src="dog-photo-hero.jpg" alt="Wildflower Hero">
+</section>
+
+<section class="brand-mark" aria-label="Wildflower Collectives logo">
+<img src="Wildflower-logo.png" alt="Wildflower Collectives logo">
+</section>
+
+<section class="intro">
+Stories about grief, transformation, spiritual awakening, healing, family, and learning how to rebuild who we are when life becomes unrecognizable.
+</section>
+
+<section class="Butterfly-Effect">
+<img src="Butterfly-Effect.jpg" alt="A Thousand Tiny Things">
+</section>
+
+<section class="blog-section">
+<div class="section-title">
+<img src="https://see.fontimg.com/api/rf5/rgX3L/YzdkZmYyY2QwZjRhNGRiZDhmZDk0MGM1MTAzOWViZmYudHRm/VGhlIHBpZWNlcyB0byBiZWdpbiB3aXRoLi4u/gustatory-delight-regular.png?r=fs&h=98&w=1500&fg=7c6587&bg=FFFFFF" alt="The pieces to begin with.">
+</div>
+
+<div class="posts-grid">
+<a class="post-card featured" href="Fathers-Day.html">
+<img src="fathers-day-peace-sign.jpg" alt="Father's Day peace sign flower wreath" style="object-position:center 25%;">
+<div class="post-content">
+<div class="post-title">Father's Day</div>
+<div class="meaning">Grief, memory, home, and the version of life that does not come back the same way.</div>
+<div class="read-more">Read Story</div>
+</div>
+</a>
+
+<a class="post-card" href="Its-Been-A-While.html">
+<img src="home-feature-its-been-a-while.jpg" alt="It's Been A While">
+<div class="post-content">
+<div class="post-title">It's Been A While</div>
+<div class="meaning">A song, a memory, and the people we miss along the way.</div>
+<div class="read-more">Read Story</div>
+</div>
+</a>
+
+<a class="post-card" href="Take-Care-Of-Her.html">
+<img src="home-feature-take-care-of-her.jpg" alt="Take Care Of Her">
+<div class="post-content">
+<div class="post-title">Take Care Of Her</div>
+<div class="meaning">The words that stayed with me long after they were spoken.</div>
+<div class="read-more">Read Story</div>
+</div>
+</a>
+
+<a class="post-card" href="Butterfly-Effect.html">
+<img src="butterfly-outside-the-er.jpg" alt="Butterfly Effect">
+<div class="post-content">
+<div class="post-title">Butterfly Effect</div>
+<div class="meaning">The story at the heart of it all, how the smallest moments quietly change everything.</div>
+<div class="read-more">Read Story</div>
+</div>
+</a>
+
+<a class="post-card" href="The-One-Who-Never-Left.html">
+<img src="home-feature-the-one-who-never-left.jpg" alt="The One Who Never Left">
+<div class="post-content">
+<div class="post-title">The One Who Never Left</div>
+<div class="meaning">When everything else changed, one soul stayed beside me through it all.</div>
+<div class="read-more">Read Story</div>
+</div>
+</a>
+</div>
+</section>
+
+<section class="cta">
+<a href="blog.html"><button>READ THE BLOG</button></a>
+<a href="quotes.html"><button>QUOTE COLLECTION</button></a>
+<a href="about.html"><button>ABOUT ME</button></a>
+</section>
+
 <blockquote>"Just like wildflowers, we can grow through places we never imagined we would survive."</blockquote>
-<footer class="site-footer"><p>&copy; 2026 Wildflower Collectives. All rights reserved.</p></footer>
+
+<footer class="site-footer">
+<p>&copy; 2026 Wildflower Collectives. All rights reserved.</p>
+</footer>
+
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
 </body>
 </html>
