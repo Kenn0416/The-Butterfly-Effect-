@@ -26,9 +26,10 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3DTT50DR"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BF3DTT50DR');</script>
 <style>
-@import url('https://fonts.cdnfonts.com/css/high-tide');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+@font-face{font-family:'Parley';src:url('https://db.onlinewebfonts.com/t/2f9c22280de16337d7b053893bac833e.woff2') format('woff2');font-display:swap;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#f7f3f0;color:#663760;font-family:Georgia,serif;line-height:1.9;overflow-x:hidden;}
+body{background:#f7f3f0;color:#663760;font-family:'Manrope',Arial,sans-serif;font-size:1.05rem;line-height:1.8;overflow-x:hidden;}
 a{color:inherit;}
 header{position:sticky;top:0;background:rgba(247,243,240,.96);backdrop-filter:blur(10px);padding:18px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #E7DED8;z-index:999;}
 .logo{font-size:1.2rem;letter-spacing:2px;color:#663760;font-weight:300;text-decoration:none;text-transform:uppercase;}
@@ -37,10 +38,11 @@ nav a{text-decoration:none;letter-spacing:2px;font-size:.82rem;color:#762254ce;t
 nav a:hover{opacity:.6;}
 .homepage{width:min(1180px,92%);margin:0 auto;padding:56px 0 70px;}
 .home-title{text-align:center;margin:0 auto 54px;}
-.home-title h1{font-family:'High Tide',Georgia,serif;font-size:clamp(2.4rem,5vw,4.5rem);font-weight:400;color:#3a3340;line-height:1.05;letter-spacing:.5px;}
+.home-title h1{font-family:'Parley',cursive;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:400;color:#3a3340;line-height:.95;letter-spacing:.5px;}
+.home-subtitle{max-width:760px;margin:24px auto 0;color:#76627E;font-size:clamp(1.08rem,1.7vw,1.3rem);line-height:1.65;text-wrap:balance;}
 .featured-layout{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(280px,.78fr);gap:44px;align-items:start;margin-bottom:54px;}
 .quote-art{display:block;width:100%;aspect-ratio:1.9/1;border:1px solid #E7DED8;background:#fffaf1;object-fit:cover;box-shadow:0 16px 36px rgba(73,46,68,.08);}
-.side-note{max-width:230px;margin:0 0 12px auto;color:#76627E;font-size:.98rem;line-height:1.45;text-align:left;}
+.side-note{max-width:270px;margin:0 0 16px auto;color:#76627E;font-size:1.18rem;line-height:1.55;text-align:left;}
 .side-note span{background:linear-gradient(transparent 58%,rgba(121,160,196,.65) 58%);padding:0 3px;}
 .side-photo{display:block;width:100%;height:520px;object-fit:cover;object-position:center;border:1px solid #E7DED8;background:#fffaf1;box-shadow:0 16px 36px rgba(73,46,68,.08);}
 .effect-copy{width:min(880px,100%);margin:-18px 0 84px;padding-left:8%;color:#5B5760;}
@@ -70,7 +72,7 @@ nav a:hover{opacity:.6;}
 .home-actions a:hover{background:#792253;color:#fffaf1;border-color:#792253;transform:translateY(-3px);}
 .site-footer{padding:36px 24px;text-align:center;background:#f7f3f0;border-top:1px solid #E7DED8;font-size:12px;color:#a89aab;letter-spacing:2px;text-transform:uppercase;}
 @media(max-width:900px){header{padding:15px 22px;flex-direction:column;gap:12px;}nav{justify-content:center;gap:18px;flex-wrap:wrap;}.homepage{padding-top:42px;}.featured-layout{grid-template-columns:1fr;gap:32px;}.side-note{max-width:none;margin:0 0 12px;text-align:center;}.side-photo{height:560px;}.effect-copy{margin:0 0 64px;padding-left:0;text-align:left;}.pieces-grid{grid-template-columns:1fr 1fr;}.piece-card.featured{grid-column:span 2;}}
-@media(max-width:640px){nav a{font-size:.68rem;letter-spacing:1px;}.logo{font-size:.95rem;}.homepage{width:90%;padding:32px 0 54px;}.page-rule{margin-bottom:26px;}.home-title{margin-bottom:34px;}.home-title::before{width:80%;}.quote-art{aspect-ratio:1.25/1;}.side-photo{height:430px;}.effect-copy p{font-size:1rem;line-height:1.75;}.pieces h2{margin-left:0;}.pieces-grid{grid-template-columns:1fr;}.piece-card.featured{grid-column:span 1;}.piece-card,.piece-card.featured{min-height:auto;flex-direction:column;}.piece-card img,.piece-card.featured img{width:100%;height:220px;}.quote-piece img{height:260px;}.piece-body{padding:22px;}.final-cta{padding:28px 20px;}.home-actions{flex-direction:column;gap:12px;}.home-actions a{width:100%;}}
+@media(max-width:640px){body{font-size:1.08rem;}nav a{font-size:.72rem;letter-spacing:1px;}.logo{font-size:1rem;}.homepage{width:90%;padding:32px 0 54px;}.home-title{margin-bottom:38px;}.home-title h1{font-size:clamp(3.7rem,18vw,5rem);}.home-subtitle{margin-top:20px;font-size:1.12rem;}.quote-art{aspect-ratio:1.25/1;}.side-note{font-size:1.2rem;}.side-photo{height:430px;}.effect-copy p{font-size:1.08rem;line-height:1.8;}.pieces h2{margin-left:0;}.pieces-grid{grid-template-columns:1fr;}.piece-card.featured{grid-column:span 1;}.piece-card,.piece-card.featured{min-height:auto;flex-direction:column;}.piece-card img,.piece-card.featured img{width:100%;height:220px;}.quote-piece img{height:260px;}.piece-body{padding:22px;}.final-cta{padding:28px 20px;}.home-actions{flex-direction:column;gap:12px;}.home-actions a{width:100%;}}
 </style>
 </head>
 <body>
@@ -86,6 +88,7 @@ nav a:hover{opacity:.6;}
 <main class="homepage">
 <section class="home-title" aria-labelledby="home-heading">
 <h1 id="home-heading">The Butterfly<br>Effect</h1>
+<p class="home-subtitle">Stories about grief, transformation, healing, family, and the small moments that ripple through everything we become.</p>
 </section>
 <section class="featured-layout" aria-label="Wildflower introduction">
 <div>
