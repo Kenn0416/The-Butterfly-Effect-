@@ -56,18 +56,22 @@ nav a:hover{opacity:.6;}
 .piece-card.featured{grid-column:span 2;min-height:220px;}
 .piece-card img{width:44%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.95);}
 .piece-card.featured img{width:48%;}
-.piece-card.text-only{align-items:center;justify-content:center;text-align:center;padding:28px;}
+.piece-card.quote-piece{min-height:360px;display:flex;flex-direction:column;text-align:left;}
+.quote-piece img{width:100%;height:220px;object-fit:contain;object-position:center;background:#f7f3f0;padding:10px;border-bottom:1px solid #E7DED8;}
 .piece-body{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:8px;}
+.quote-piece .piece-body{padding:22px 24px 24px;}
 .piece-kicker{text-transform:uppercase;letter-spacing:2px;font-size:.68rem;color:#a76a8f;}
 .piece-title{font-size:clamp(1.2rem,2.2vw,1.8rem);line-height:1.05;color:#792253;font-weight:400;}
 .piece-card:not(.featured) .piece-title{font-size:1.2rem;}
 .piece-copy{font-size:.92rem;line-height:1.55;color:#76627E;}
-.home-actions{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:42px auto 0;}
+.final-cta{margin:48px auto 0;padding:34px 28px;background:#fffaf1;border:1px solid #E7DED8;text-align:center;color:#76627E;}
+.final-cta p{max-width:620px;margin:0 auto 22px;font-style:italic;font-size:1.05rem;line-height:1.7;}
+.home-actions{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:0 auto;}
 .home-actions a{min-width:150px;text-align:center;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;color:#792253;border:1px solid #54ae72;border-radius:999px;background:#fffaf1;padding:12px 20px;transition:background .3s ease,color .3s ease,transform .3s ease,border-color .3s ease;}
 .home-actions a:hover{background:#792253;color:#fffaf1;border-color:#792253;transform:translateY(-3px);}
 .site-footer{padding:36px 24px;text-align:center;background:#f7f3f0;border-top:1px solid #E7DED8;font-size:12px;color:#a89aab;letter-spacing:2px;text-transform:uppercase;}
 @media(max-width:900px){header{padding:15px 22px;flex-direction:column;gap:12px;}nav{justify-content:center;gap:18px;flex-wrap:wrap;}.homepage{padding-top:42px;}.featured-layout{grid-template-columns:1fr;gap:32px;}.side-note{max-width:none;margin:0 0 12px;text-align:center;}.side-photo{height:560px;}.effect-copy{margin:0 0 64px;padding-left:0;text-align:left;}.pieces-grid{grid-template-columns:1fr 1fr;}.piece-card.featured{grid-column:span 2;}}
-@media(max-width:640px){nav a{font-size:.68rem;letter-spacing:1px;}.logo{font-size:.95rem;}.homepage{width:90%;padding:32px 0 54px;}.page-rule{margin-bottom:26px;}.home-title{margin-bottom:34px;}.home-title::before{width:80%;}.quote-art{aspect-ratio:1.25/1;}.side-photo{height:430px;}.effect-copy p{font-size:1rem;line-height:1.75;}.pieces h2{margin-left:0;}.pieces-grid{grid-template-columns:1fr;}.piece-card.featured{grid-column:span 1;}.piece-card,.piece-card.featured{min-height:auto;flex-direction:column;}.piece-card img,.piece-card.featured img{width:100%;height:220px;}.piece-body{padding:22px;}.home-actions{flex-direction:column;gap:12px;}.home-actions a{width:100%;}}
+@media(max-width:640px){nav a{font-size:.68rem;letter-spacing:1px;}.logo{font-size:.95rem;}.homepage{width:90%;padding:32px 0 54px;}.page-rule{margin-bottom:26px;}.home-title{margin-bottom:34px;}.home-title::before{width:80%;}.quote-art{aspect-ratio:1.25/1;}.side-photo{height:430px;}.effect-copy p{font-size:1rem;line-height:1.75;}.pieces h2{margin-left:0;}.pieces-grid{grid-template-columns:1fr;}.piece-card.featured{grid-column:span 1;}.piece-card,.piece-card.featured{min-height:auto;flex-direction:column;}.piece-card img,.piece-card.featured img{width:100%;height:220px;}.quote-piece img{height:260px;}.piece-body{padding:22px;}.final-cta{padding:28px 20px;}.home-actions{flex-direction:column;gap:12px;}.home-actions a{width:100%;}}
 </style>
 </head>
 <body>
@@ -110,28 +114,32 @@ nav a:hover{opacity:.6;}
 <p class="piece-copy">The story that began The Butterfly Effect: one moment, one sign, and the way grief can shift everything.</p>
 </div>
 </a>
-<a class="piece-card text-only" href="quotes.html">
+<a class="piece-card quote-piece" href="quotes.html">
+<img src="download (21).jpg" alt="And like the moon, we must go through phases of emptiness to feel full again quote artwork">
 <div class="piece-body">
 <span class="piece-kicker">Quotes</span>
 <strong class="piece-title">Words That Stayed</strong>
 <p class="piece-copy">A soft place for the reminders, signs, and sentences that feel like they found you on purpose.</p>
 </div>
 </a>
-<a class="piece-card text-only" href="Theres-No-Place-That-Feels-Like-Home.html">
+<a class="piece-card quote-piece" href="Theres-No-Place-That-Feels-Like-Home.html">
+<img src="download (31).jpg" alt="And then she knew that you could become homesick for people too quote artwork">
 <div class="piece-body">
 <span class="piece-kicker">Story</span>
 <strong class="piece-title">Displaced</strong>
 <p class="piece-copy">On home, shelter, and the ache of trying to land somewhere steady again.</p>
 </div>
 </a>
-<a class="piece-card text-only" href="The-Gifts-We-Are.html">
+<a class="piece-card quote-piece" href="The-Gifts-We-Are.html">
+<img src="download (24).jpg" alt="In a world of algorithms, be human quote artwork">
 <div class="piece-body">
 <span class="piece-kicker">Latest</span>
 <strong class="piece-title">Seen</strong>
 <p class="piece-copy">A reflection on purpose, love, and the people who show us what we were meant to give.</p>
 </div>
 </a>
-<a class="piece-card text-only" href="Take-Care-Of-Her.html">
+<a class="piece-card quote-piece" href="Take-Care-Of-Her.html">
+<img src="download (23).jpg" alt="Little wild one, when the world gets too heavy, look up quote artwork">
 <div class="piece-body">
 <span class="piece-kicker">Family</span>
 <strong class="piece-title">Promise</strong>
@@ -139,10 +147,13 @@ nav a:hover{opacity:.6;}
 </div>
 </a>
 </div>
-<div class="home-actions" aria-label="Explore Wildflower Collectives">
+<div class="final-cta" aria-label="Keep exploring Wildflower Collectives">
+<p>Start wherever your heart needs to land: a story, a quote, or the reason this space was created.</p>
+<div class="home-actions">
 <a href="blog.html">Read Blog</a>
 <a href="quotes.html">View Quotes</a>
 <a href="about.html">About</a>
+</div>
 </div>
 </section>
 </main>
