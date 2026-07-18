@@ -8,50 +8,71 @@
 <meta name="author" content="Kendall Evans">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://wildflowercollectives.com/welcome.html">
-<meta name="theme-color" content="#6f4a7d">
+<meta name="theme-color" content="#342d3a">
 <link rel="icon" href="/wildflower-logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/Wildflower-logo.png">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+@font-face{font-family:'Arabella';src:url('https://db.onlinewebfonts.com/t/2e53190527bdd01ed72e812ba5d53c87.woff2') format('woff2');font-display:swap;}
 *{margin:0;padding:0;box-sizing:border-box;}
-html{min-height:100%;}
-body{min-height:100%;background:#f7f3f0;color:#663760;font-family:Georgia,serif;line-height:1.9;overflow-x:hidden;}
-.welcome-page{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:7rem 1.5rem 3rem;}
-.welcome-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;background:#f7f3f0;}
-.welcome-page::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(247,243,240,.34),rgba(247,243,240,.58)),rgba(70,46,76,.14);z-index:1;}
-.welcome-content{position:relative;z-index:2;width:min(820px,100%);text-align:center;color:#fffaf1;text-shadow:0 2px 24px rgba(48,32,56,.32);}
-.welcome-kicker{display:block;margin-bottom:1.1rem;text-transform:uppercase;letter-spacing:4px;font-size:.78rem;color:#fffaf1;}
-h1{font-size:4.6rem;font-weight:300;line-height:1.05;letter-spacing:1px;margin-bottom:1.1rem;color:#fffaf1;}
-.welcome-lead{max-width:680px;margin:0 auto;font-size:1.22rem;font-style:italic;color:rgba(255,250,241,.94);line-height:1.8;}
-.welcome-note{margin:1.2rem auto 0;font-size:.92rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,250,241,.86);}
-.welcome-actions{display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap;margin-top:2.6rem;}
-.welcome-actions a{min-width:138px;padding:.82rem 1.35rem;border:1px solid rgba(255,250,241,.72);background:rgba(255,250,241,.18);backdrop-filter:blur(8px);color:#fffaf1;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease;}
-.welcome-actions a:hover{background:rgba(255,250,241,.9);border-color:#fffaf1;color:#792253;transform:translateY(-3px);}
-.welcome-actions a:nth-child(2):hover{color:#a76a8f;}
-.welcome-actions a:nth-child(3):hover{color:#6f4a7d;}
-.welcome-actions a:nth-child(4):hover{color:#4a7d6f;}
-.welcome-footer{position:absolute;left:0;right:0;bottom:1.2rem;z-index:2;text-align:center;color:rgba(255,250,241,.82);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;text-shadow:0 1px 14px rgba(48,32,56,.28);}
-@media(max-width:768px){.welcome-page{padding:5.5rem 1.2rem 4rem;}h1{font-size:3rem;}.welcome-kicker{font-size:.7rem;letter-spacing:3px;}.welcome-lead{font-size:1.05rem;}.welcome-actions{gap:.75rem;margin-top:2rem;}.welcome-actions a{min-width:128px;padding:.75rem 1rem;font-size:.72rem;}}
-@media(max-width:480px){.welcome-page{align-items:flex-end;padding:4rem 1rem 5.5rem;}h1{font-size:2.25rem;}.welcome-lead{font-size:.98rem;line-height:1.65;}.welcome-note{font-size:.72rem;letter-spacing:1.5px;}.welcome-actions{flex-direction:column;align-items:stretch;}.welcome-actions a{width:100%;}.welcome-footer{bottom:.8rem;font-size:.62rem;}}
+html,body{min-height:100%;}
+body{background:#342d3a;color:#fffaf4;font-family:'Manrope',Arial,sans-serif;overflow:hidden;}
+a{color:inherit;}
+.welcome-page{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:7rem 1.5rem 3rem;isolation:isolate;}
+.welcome-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;background:#d9cbd5;}
+.video-overlay{position:absolute;inset:0;z-index:-1;background:rgba(52,45,58,.4);}
+.site-header{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.25rem 5%;border-bottom:1px solid rgba(255,250,244,.34);background:rgba(52,45,58,.2);backdrop-filter:blur(10px);}
+.logo{font-size:.84rem;font-weight:600;letter-spacing:.18em;text-decoration:none;text-transform:uppercase;white-space:nowrap;}
+nav{display:flex;align-items:center;gap:1.6rem;}
+nav a{position:relative;font-size:.74rem;font-weight:600;letter-spacing:.15em;text-decoration:none;text-transform:uppercase;}
+nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-.35rem;height:1px;background:#fffaf4;transition:right .25s ease;}
+nav a:hover::after,nav a:focus-visible::after{right:0;}
+.welcome-content{width:min(900px,100%);text-align:center;text-shadow:0 2px 22px rgba(52,45,58,.5);}
+.welcome-kicker{display:block;margin-bottom:.8rem;font-size:.75rem;font-weight:600;letter-spacing:.35em;text-transform:uppercase;}
+h1{font-family:'Arabella',cursive;font-size:clamp(4.8rem,10vw,9rem);font-weight:400;line-height:.9;white-space:nowrap;}
+.welcome-lead{max-width:720px;margin:1.6rem auto 0;font-size:clamp(1.05rem,1.8vw,1.32rem);line-height:1.65;text-wrap:balance;}
+.welcome-note{margin:1rem auto 0;font-size:.8rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;}
+.welcome-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:2.2rem;padding:.95rem 1.8rem;border:1px solid rgba(255,250,244,.78);background:#fffaf4;color:#5f415d;font-size:.76rem;font-weight:600;letter-spacing:.18em;text-decoration:none;text-transform:uppercase;transition:transform .25s ease,background .25s ease,color .25s ease;}
+.welcome-cta:hover,.welcome-cta:focus-visible{background:#5f415d;color:#fffaf4;transform:translateY(-2px);}
+.welcome-footer{position:absolute;left:0;right:0;bottom:1.2rem;text-align:center;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;}
+@media(max-width:700px){.welcome-page{padding:8.5rem 1.25rem 4.5rem;}.site-header{align-items:flex-start;padding:1rem 1.1rem;}.logo{font-size:.72rem;}nav{justify-content:flex-end;gap:.65rem;flex-wrap:wrap;}nav a{font-size:.62rem;letter-spacing:.09em;}h1{font-size:clamp(3.2rem,17vw,5rem);}.welcome-lead{font-size:1.05rem;line-height:1.6;}.welcome-note{font-size:.68rem;line-height:1.6;}.welcome-footer{font-size:.58rem;}}
+@media(max-width:430px){.site-header{gap:1rem;}.logo{max-width:105px;white-space:normal;line-height:1.35;}nav{max-width:205px;}.welcome-kicker{font-size:.64rem;letter-spacing:.25em;}h1{font-size:2rem;}.welcome-cta{width:100%;max-width:280px;}}
+@media(prefers-reduced-motion:reduce){.welcome-video{display:none;}.welcome-page{background:#8f7c91;}}
 </style>
 </head>
 <body>
 <main class="welcome-page" aria-label="Welcome to Wildflower Collectives">
-<video class="welcome-video" autoplay muted loop playsinline poster="homepage-bg.jpg">
-<source src="flower-bg.mp4" type="video/mp4">
+<video id="welcome-video" class="welcome-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<source src="water-ripples-intro.mp4" type="video/mp4">
 </video>
+<div class="video-overlay" aria-hidden="true"></div>
+<header class="site-header">
+<a class="logo exit-link" href="index.html">Wildflower Collectives</a>
+<nav aria-label="Primary navigation">
+<a class="exit-link" href="index.html">Home</a>
+<a class="exit-link" href="blog.html">Blog</a>
+<a class="exit-link" href="quotes.html">Quotes</a>
+<a class="exit-link" href="about.html">About</a>
+</nav>
+</header>
 <section class="welcome-content">
 <span class="welcome-kicker">The Butterfly Effect</span>
 <h1>Wildflower Collectives</h1>
 <p class="welcome-lead">Stories about grief, transformation, healing, family, and the small moments that ripple through everything we become.</p>
 <p class="welcome-note">Begin wherever your heart needs to land.</p>
-<div class="welcome-actions" aria-label="Enter Wildflower Collectives">
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="quotes.html">Quotes</a>
-<a href="about.html">About</a>
-</div>
+<a class="welcome-cta exit-link" href="index.html">Enter The Butterfly Effect</a>
 </section>
 <div class="welcome-footer">Healing. Growth. Becoming.</div>
 </main>
+<script>
+const welcomeVideo=document.getElementById('welcome-video');
+const keepVideoPlaying=()=>{if(welcomeVideo&&welcomeVideo.paused){welcomeVideo.play().catch(()=>{});}};
+welcomeVideo.addEventListener('ended',()=>{welcomeVideo.currentTime=0;keepVideoPlaying();});
+welcomeVideo.addEventListener('pause',keepVideoPlaying);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)keepVideoPlaying();});
+window.addEventListener('pageshow',keepVideoPlaying);
+document.querySelectorAll('.exit-link').forEach(link=>link.addEventListener('click',()=>{welcomeVideo.removeEventListener('pause',keepVideoPlaying);welcomeVideo.pause();}));
+keepVideoPlaying();
+</script>
 </body>
 </html>
