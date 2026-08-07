@@ -4,8 +4,8 @@
   "version": "1.0",
   "description": "My custom website turned into a browser extension plugin.",
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_popup": "popup.html"
   },
   "permissions": []
 }
+
